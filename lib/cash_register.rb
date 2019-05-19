@@ -7,10 +7,7 @@ class CashRegister
     @discount = discount
   end
 
-  def add_item(thing, price, quantity = nil)
-    if quantity == nil
-      quantity = 1
-    end
+  def add_item(thing, price, quantity = 1)
     @total += (price * quantity)
     @things = []
     quantity.times do
