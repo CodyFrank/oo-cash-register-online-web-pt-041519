@@ -14,6 +14,7 @@ class CashRegister
     quantity.times do
       @things << thing
     end
+    @transaction << price
   end
 
   def apply_discount
@@ -28,5 +29,11 @@ class CashRegister
 
   def items
     @things
+  end
+
+  def void_last_transaction
+    refund = @transaction.pop
+    @things.pop
+    @total -= refund
   end
 end
