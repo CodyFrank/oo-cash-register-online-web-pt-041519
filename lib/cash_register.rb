@@ -8,4 +8,5 @@ class CashRegister(disc)
       @total = 20
     end
   end
+
 end
